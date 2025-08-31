@@ -29,13 +29,13 @@ public class ItemViewController {
     ) {
         model.addAttribute("error", error);
         model.addAttribute("message", message);
-        return "pages/search";
+        return "pages/search-by-id-form";
     }
 
     @GetMapping("/new")
     public String showCreateForm(Model model) {
         model.addAttribute("item", new Item());
-        return "pages/create";
+        return "pages/create-form";
     }
 
     @GetMapping("/{id}/edit")
@@ -44,14 +44,14 @@ public class ItemViewController {
     ) {
         Item item = service.findById(id);
         model.addAttribute("item", item);
-        return "pages/update";
+        return "pages/edit-form";
     }
 
     @GetMapping("/{id}/delete")
     public String showDeleteConfirmationForm(@PathVariable Long id, Model model) {
         Item item = service.findById(id);
         model.addAttribute("item", item);
-        return "pages/delete"; // JTE-шаблон подтверждения
+        return "pages/delete-confirm-form"; // JTE-шаблон подтверждения
     }
 
 }

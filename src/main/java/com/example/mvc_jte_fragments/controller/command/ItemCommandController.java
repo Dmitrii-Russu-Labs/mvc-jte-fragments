@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
-@RequestMapping("/items")
+@RequestMapping({"", "/", "/items"})
 public class ItemCommandController {
 
     private final ItemService service;
@@ -27,14 +27,14 @@ public class ItemCommandController {
     ) {
         Item saved = service.saveOrUpdate(item);
         redirectAttributes.addFlashAttribute("message", "User information saved successfully!");
-        return "redirect:/search?id=" + saved.getId();
+        return "redirect:/items/search?id=" + saved.getId();
     }
 
     @PostMapping("/{id}/delete")
     public String delete(@PathVariable Long id, RedirectAttributes redirectAttributes) {
         service.deleteById(id);
         redirectAttributes.addFlashAttribute("message", "Задание # " + id + " - удалено!");
-        return "redirect:/items/all";
+        return "redirect:/all";
     }
 
     @PostMapping("/{id}")

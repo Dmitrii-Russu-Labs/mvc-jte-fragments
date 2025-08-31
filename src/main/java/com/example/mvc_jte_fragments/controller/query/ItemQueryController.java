@@ -25,7 +25,7 @@ public class ItemQueryController {
     ) {
         Item item = service.findById(id);
         model.addAttribute("item", item);
-        return "pages/item";
+        return "pages/item-details";
     }
 
     @GetMapping("/all")
@@ -55,7 +55,7 @@ public class ItemQueryController {
         model.addAttribute("items", items);
         model.addAttribute("message", message);
 
-        return "pages/items";
+        return "pages/list";
     }
 
 }

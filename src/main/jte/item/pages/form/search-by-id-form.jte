@@ -1,9 +1,9 @@
 @param String error
 @param String message
-@param com.example.mvc_jte_fragments.entity.Item item
+@param com.example.mvc_jte_fragments.item.entity.Item item
 
 
-@template.layout.main(content = @`
+@template.item.layout.main(content = @`
     <h2>Search Form</h2>
 
     <h2>Поиск задачи по ID</h2>

@@ -1,8 +1,8 @@
-package com.example.mvc_jte_fragments.controller.query;
+package com.example.mvc_jte_fragments.item.controller.query;
 
 import java.util.List;
-import com.example.mvc_jte_fragments.entity.Item;
-import com.example.mvc_jte_fragments.service.ItemService;
+import com.example.mvc_jte_fragments.item.entity.Item;
+import com.example.mvc_jte_fragments.item.service.ItemService;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,7 +25,7 @@ public class ItemQueryController {
     ) {
         Item item = service.findById(id);
         model.addAttribute("item", item);
-        return "pages/item-details";
+        return "item/pages/result/item-details";
     }
 
     @GetMapping("/all")
@@ -55,7 +55,7 @@ public class ItemQueryController {
         model.addAttribute("items", items);
         model.addAttribute("message", message);
 
-        return "pages/list";
+        return "item/pages/result/list";
     }
 
 }

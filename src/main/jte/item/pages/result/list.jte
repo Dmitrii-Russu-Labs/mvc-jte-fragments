@@ -1,4 +1,4 @@
-@import com.example.mvc_jte_fragments.entity.Item
+@import com.example.mvc_jte_fragments.item.entity.Item
 
 @import java.util.List
 @param List<Item> items
@@ -10,7 +10,7 @@
 @param String sortDir
 @param String reverseSortDir
 
-@template.layout.main(content = @`
+@template.item.layout.main(content = @`
 
     <h2>Все задачи</h2>
     @if (message != null)<p style="color: green;">${message}</p>@endif

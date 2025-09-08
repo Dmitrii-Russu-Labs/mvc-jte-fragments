@@ -1,7 +1,7 @@
 @param String error
-@param com.example.mvc_jte_fragments.entity.Item item
+@param com.example.mvc_jte_fragments.item.entity.Item item
 
-@template.layout.main(content = @`
+@template.item.layout.main(content = @`
 
     <h2>Создать новую задачу</h2>
     <form action="/items" method="post">

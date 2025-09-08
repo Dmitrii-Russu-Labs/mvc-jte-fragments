@@ -1,7 +1,7 @@
-package com.example.mvc_jte_fragments.service;
+package com.example.mvc_jte_fragments.item.service;
 
-import com.example.mvc_jte_fragments.entity.Item;
-import com.example.mvc_jte_fragments.repository.ItemRepository;
+import com.example.mvc_jte_fragments.item.entity.Item;
+import com.example.mvc_jte_fragments.item.repository.ItemRepository;
 
 import java.util.NoSuchElementException;
 import org.springframework.beans.BeanUtils;

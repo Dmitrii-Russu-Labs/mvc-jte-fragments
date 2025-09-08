@@ -1,7 +1,7 @@
-@param com.example.mvc_jte_fragments.entity.Item item
+@param com.example.mvc_jte_fragments.item.entity.Item item
 
 
-@template.layout.main(content = @`
+@template.item.layout.main(content = @`
 
     <h1>Подтвердите удаление</h1>
 

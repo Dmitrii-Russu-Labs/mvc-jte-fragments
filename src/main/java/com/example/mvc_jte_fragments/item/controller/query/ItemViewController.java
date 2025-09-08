@@ -1,7 +1,7 @@
-package com.example.mvc_jte_fragments.controller.query;
+package com.example.mvc_jte_fragments.item.controller.query;
 
-import com.example.mvc_jte_fragments.entity.Item;
-import com.example.mvc_jte_fragments.service.ItemService;
+import com.example.mvc_jte_fragments.item.entity.Item;
+import com.example.mvc_jte_fragments.item.service.ItemService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +18,7 @@ public class ItemViewController {
 
     @GetMapping
     public String maiPage() {
-        return "layout/main";
+        return "item/layout/main";
     }
 
     @GetMapping("/search_form")
@@ -29,13 +29,13 @@ public class ItemViewController {
     ) {
         model.addAttribute("error", error);
         model.addAttribute("message", message);
-        return "pages/search-by-id-form";
+        return "item/pages/form/search-by-id-form";
     }
 
     @GetMapping("/new")
     public String showCreateForm(Model model) {
         model.addAttribute("item", new Item());
-        return "pages/create-form";
+        return "item/pages/form/create-form";
     }
 
     @GetMapping("/{id}/edit")
@@ -44,14 +44,14 @@ public class ItemViewController {
     ) {
         Item item = service.findById(id);
         model.addAttribute("item", item);
-        return "pages/edit-form";
+        return "item/pages/form/edit-form";
     }
 
     @GetMapping("/{id}/delete")
     public String showDeleteConfirmationForm(@PathVariable Long id, Model model) {
         Item item = service.findById(id);
         model.addAttribute("item", item);
-        return "pages/delete-confirm-form"; // JTE-шаблон подтверждения
+        return "item/pages/form/delete-confirm-form"; // JTE-шаблон подтверждения
     }
 
 }

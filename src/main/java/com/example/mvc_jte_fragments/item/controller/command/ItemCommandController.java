@@ -1,7 +1,7 @@
-package com.example.mvc_jte_fragments.controller.command;
+package com.example.mvc_jte_fragments.item.controller.command;
 
-import com.example.mvc_jte_fragments.entity.Item;
-import com.example.mvc_jte_fragments.service.ItemService;
+import com.example.mvc_jte_fragments.item.entity.Item;
+import com.example.mvc_jte_fragments.item.service.ItemService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
